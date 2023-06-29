@@ -116,6 +116,6 @@ public class NeighborsTest extends AbstractCaseTest {
     private static void testLogic(String expected) {
         setUp(str);
         Neighbors.main(null);
-        write(expected);
+        validate(expected);
     }
 }

@@ -44,6 +44,6 @@ public class PowerOfFourTest extends AbstractCaseTest {
     private static void testLogic(String expected) {
         setUp(str);
         PowerOfFour.main(null);
-        write(expected);
+        validate(expected);
     }
 }

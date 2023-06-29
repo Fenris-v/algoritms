@@ -19,7 +19,7 @@ public abstract class AbstractCaseTest {
         System.setOut(new PrintStream(outputStream));
     }
 
-    protected static void write(String expected) {
+    protected static void validate(String expected) {
         String result = outputStream.toString();
 
         System.setOut(new PrintStream(ORIGINAL_OUTPUT_STREAM));

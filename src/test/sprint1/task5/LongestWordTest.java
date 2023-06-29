@@ -30,6 +30,6 @@ public class LongestWordTest extends AbstractCaseTest {
     private static void testLogic(String expected) {
         setUp(str);
         LongestWord.main(null);
-        write(expected);
+        validate(expected);
     }
 }

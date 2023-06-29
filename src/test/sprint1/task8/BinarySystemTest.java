@@ -48,6 +48,6 @@ public class BinarySystemTest extends AbstractCaseTest {
     private static void testLogic(String expected) {
         setUp(str);
         BinarySystem.main(null);
-        write(expected);
+        validate(expected);
     }
 }

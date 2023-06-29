@@ -1,9 +1,9 @@
-package test.sprint1.task4;
+package test.sprint1.task12;
 
-import sprint1.task4.ChaoticWeather;
+import sprint1.task12.ExtraLetter;
 import test.AbstractCaseTest;
 
-public class ChaoticWeatherTest extends AbstractCaseTest {
+public class ExtraLetterTest extends AbstractCaseTest {
     private static String str;
 
     public static void main(String[] args) {
@@ -13,23 +13,23 @@ public class ChaoticWeatherTest extends AbstractCaseTest {
     }
 
     private static void test1() {
-        str = "7\n" + "-1 -10 -8 0 2 0 5\n";
-        testLogic("3");
+        str = "abcd\n" + "abcde";
+        testLogic("e");
     }
 
     private static void test2() {
-        str = "5\n" + "1 1 1 1 1\n";
-        testLogic("0");
+        str = "go\n" + "ogg";
+        testLogic("g");
     }
 
     private static void test3() {
-        str = "5\n" + "1 2 5 4 8\n";
-        testLogic("2");
+        str = "xtkpx\n" + "xkctpx\n";
+        testLogic("c");
     }
 
     private static void testLogic(String expected) {
         setUp(str);
-        ChaoticWeather.main(null);
+        ExtraLetter.main(null);
         validate(expected);
     }
 }

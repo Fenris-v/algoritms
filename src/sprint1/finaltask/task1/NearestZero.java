@@ -13,8 +13,6 @@ import java.util.stream.Collectors;
  * id: 88506397
  */
 public class NearestZero {
-    private static int[] map;
-
     public static void main(String[] args) {
         calculateDistance();
     }
@@ -45,44 +43,26 @@ public class NearestZero {
     }
 
     private static int[] buildMap(int[] addresses) {
-        map = new int[addresses.length];
-        int zeroIndex = getFirstZeroIndex(addresses);
-        for (int i = 0; i < zeroIndex; i++) {
-            map[i] = zeroIndex - i;
-        }
-
-        int prevZeroIndex = zeroIndex++;
-        while (zeroIndex < addresses.length) {
-            if (addresses[zeroIndex] == 0) {
-                buildMapBetweenIndexes(prevZeroIndex, zeroIndex);
-                prevZeroIndex = zeroIndex;
+        int[] map = new int[addresses.length];
+        int zeroIndex = -addresses.length;
+        for (int i = 0; i < addresses.length; i++) {
+            if (addresses[i] == 0) {
+                map[i] = 0;
+                zeroIndex = i;
+            } else {
+                map[i] = i - zeroIndex;
             }
-
-            zeroIndex++;
         }
 
-        for (int i = prevZeroIndex; i < addresses.length; i++) {
-            map[i] = i - prevZeroIndex;
+        zeroIndex = addresses.length * 2;
+        for (int i = addresses.length - 1; i >= 0; i--) {
+            if (addresses[i] == 0) {
+                zeroIndex = i;
+            } else {
+                map[i] = Math.min(zeroIndex - i, map[i]);
+            }
         }
 
         return map;
-    }
-
-    private static int getFirstZeroIndex(int[] addresses) {
-        int index = 0;
-        while (addresses[index] != 0) {
-            index++;
-        }
-
-        return index;
-    }
-
-    private static void buildMapBetweenIndexes(int prevZeroIndex, int zeroIndex) {
-        int distance = zeroIndex - prevZeroIndex;
-        int halfDistance = distance / 2;
-        for (int i = 1; i <= halfDistance; i++) {
-            map[prevZeroIndex + i] = i;
-            map[zeroIndex - i] = i;
-        }
     }
 }

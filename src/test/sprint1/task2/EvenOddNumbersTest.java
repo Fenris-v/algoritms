@@ -74,6 +74,6 @@ public class EvenOddNumbersTest extends AbstractCaseTest {
 
         setUp(str);
         EvenOddNumbers.main(null);
-        write(expected);
+        validate(expected);
     }
 }

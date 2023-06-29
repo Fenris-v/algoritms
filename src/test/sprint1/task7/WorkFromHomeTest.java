@@ -1,6 +1,6 @@
 package test.sprint1.task7;
 
-import sprint1.task7.WorkFromHome;
+import sprint1.task7.WorkFromHome2;
 import test.AbstractCaseTest;
 
 public class WorkFromHomeTest extends AbstractCaseTest {
@@ -23,7 +23,7 @@ public class WorkFromHomeTest extends AbstractCaseTest {
 
     private static void testLogic(String expected) {
         setUp(str);
-        WorkFromHome.main(null);
-        write(expected);
+        WorkFromHome2.main(null);
+        validate(expected);
     }
 }

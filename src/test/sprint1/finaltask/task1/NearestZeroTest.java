@@ -42,6 +42,6 @@ public class NearestZeroTest extends AbstractCaseTest {
     private static void testLogic(String expected) {
         setUp(str);
         NearestZero.main(null);
-        write(expected);
+        validate(expected);
     }
 }

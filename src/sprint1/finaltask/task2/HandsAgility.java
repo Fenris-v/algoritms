@@ -5,22 +5,20 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
- * id: 88514514
+ * id: 88583307
  */
 public class HandsAgility {
     private static int maxSameTimePressedKeys;
-    private static Map<Integer, Integer> sameValuesCountMap;
+    private static int[] sameValuesArray;
 
     public static void main(String[] args) {
         try (
                 BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out))
         ) {
-            sameValuesCountMap = new HashMap<>();
+            sameValuesArray = new int[9];
             initValueData(reader);
             writer.write(String.valueOf(countPossiblePoints()));
         } catch (IOException e) {
@@ -39,24 +37,20 @@ public class HandsAgility {
                     continue;
                 }
 
-                int value = Integer.parseInt(String.valueOf(row.charAt(j)));
-                if (sameValuesCountMap.containsKey(value)) {
-                    sameValuesCountMap.put(value, sameValuesCountMap.get(value) + 1);
-                } else {
-                    sameValuesCountMap.put(value, 1);
-                }
+                int value = Character.digit(row.charAt(j), 10);
+                sameValuesArray[value - 1]++;
             }
         }
     }
 
     private static int countPossiblePoints() {
         int possiblePoints = 0;
-        for (int t = 1; t < 10; t++) {
-            if (!sameValuesCountMap.containsKey(t)) {
+        for (int t = 0; t < 9; t++) {
+            if (sameValuesArray[t] == 0) {
                 continue;
             }
 
-            if (sameValuesCountMap.get(t) <= maxSameTimePressedKeys) {
+            if (sameValuesArray[t] <= maxSameTimePressedKeys) {
                 possiblePoints++;
             }
         }

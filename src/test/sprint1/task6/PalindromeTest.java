@@ -26,6 +26,6 @@ public class PalindromeTest extends AbstractCaseTest {
     private static void testLogic(String expected) {
         setUp(str);
         Palindrome.main(null);
-        write(expected);
+        validate(expected);
     }
 }
