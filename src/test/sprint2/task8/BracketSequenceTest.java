@@ -1,48 +1,42 @@
-package test.sprint1.task9;
+package test.sprint2.task8;
 
-import sprint1.task9.PowerOfFour;
+import sprint2.task8.BracketSequence;
 import test.AbstractCaseTest;
 
-public class PowerOfFourTest extends AbstractCaseTest {
+public class BracketSequenceTest extends AbstractCaseTest {
     private static final String TRUE = "True";
-    private static final String False = "False";
+    private static final String FALSE = "False";
 
     public static void main(String[] args) {
         test1();
         test2();
         test3();
         test4();
-        test5();
     }
 
     private static void test1() {
-        str = "16";
+        str = "";
         testLogic(TRUE);
     }
 
     private static void test2() {
-        str = "15";
-        testLogic(False);
+        str = "{[()]}";
+        testLogic(TRUE);
     }
 
     private static void test3() {
-        str = "0";
-        testLogic(False);
+        str = "()";
+        testLogic(TRUE);
     }
 
     private static void test4() {
-        str = "4";
-        testLogic(TRUE);
-    }
-
-    private static void test5() {
-        str = "256";
-        testLogic(TRUE);
+        str = "[{[()]}";
+        testLogic(FALSE);
     }
 
     private static void testLogic(String expected) {
         setUp(str);
-        PowerOfFour.main(null);
+        BracketSequence.main(null);
         validate(expected);
     }
 }

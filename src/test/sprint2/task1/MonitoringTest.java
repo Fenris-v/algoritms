@@ -4,8 +4,6 @@ import sprint2.task1.Monitoring;
 import test.AbstractCaseTest;
 
 public class MonitoringTest extends AbstractCaseTest {
-    private static String str;
-
     public static void main(String[] args) {
         test1();
         test2();

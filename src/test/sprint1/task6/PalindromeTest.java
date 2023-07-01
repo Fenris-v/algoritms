@@ -4,7 +4,6 @@ import sprint1.task6.Palindrome;
 import test.AbstractCaseTest;
 
 public class PalindromeTest extends AbstractCaseTest {
-    private static String str;
     private final static String TRUE = "True";
     private final static String FALSE = "False";
 

@@ -4,8 +4,6 @@ import sprint1.task8.BinarySystem;
 import test.AbstractCaseTest;
 
 public class BinarySystemTest extends AbstractCaseTest {
-    private static String str;
-
     public static void main(String[] args) {
         test1();
         test2();

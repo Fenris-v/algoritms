@@ -4,8 +4,6 @@ import sprint1.finaltask.task2.HandsAgility;
 import test.AbstractCaseTest;
 
 public class HandsAgilityTest extends AbstractCaseTest {
-    private static String str;
-
     public static void main(String[] args) {
         test1();
         test2();

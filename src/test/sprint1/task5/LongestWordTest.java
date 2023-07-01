@@ -4,8 +4,6 @@ import sprint1.task5.LongestWord;
 import test.AbstractCaseTest;
 
 public class LongestWordTest extends AbstractCaseTest {
-    private static String str;
-
     public static void main(String[] args) {
         test1();
         test2();

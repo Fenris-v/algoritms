@@ -6,6 +6,8 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 public abstract class AbstractCaseTest {
+    protected static String str;
+
     private static final OutputStream ORIGINAL_OUTPUT_STREAM = System.out;
 
     private static int testCase = 1;

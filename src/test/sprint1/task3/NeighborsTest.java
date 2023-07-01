@@ -4,8 +4,6 @@ import sprint1.task3.Neighbors;
 import test.AbstractCaseTest;
 
 public class NeighborsTest extends AbstractCaseTest {
-    private static String str;
-
     public static void main(String[] args) {
         test1();
         test2();

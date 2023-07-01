@@ -4,8 +4,6 @@ import sprint1.task10.Factorization;
 import test.AbstractCaseTest;
 
 public class FactorizationTest extends AbstractCaseTest {
-    private static String str;
-
     public static void main(String[] args) {
         test1();
         test2();

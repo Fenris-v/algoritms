@@ -4,8 +4,6 @@ import sprint1.task12.ExtraLetter;
 import test.AbstractCaseTest;
 
 public class ExtraLetterTest extends AbstractCaseTest {
-    private static String str;
-
     public static void main(String[] args) {
         test1();
         test2();

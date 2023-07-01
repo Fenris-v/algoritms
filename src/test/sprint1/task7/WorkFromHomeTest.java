@@ -4,8 +4,6 @@ import sprint1.task7.WorkFromHome2;
 import test.AbstractCaseTest;
 
 public class WorkFromHomeTest extends AbstractCaseTest {
-    private static String str;
-
     public static void main(String[] args) {
         test1();
         test2();

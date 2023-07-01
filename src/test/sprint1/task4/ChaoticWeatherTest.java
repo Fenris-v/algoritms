@@ -4,8 +4,6 @@ import sprint1.task4.ChaoticWeather;
 import test.AbstractCaseTest;
 
 public class ChaoticWeatherTest extends AbstractCaseTest {
-    private static String str;
-
     public static void main(String[] args) {
         test1();
         test2();

@@ -4,8 +4,6 @@ import sprint1.finaltask.task1.NearestZero;
 import test.AbstractCaseTest;
 
 public class NearestZeroTest extends AbstractCaseTest {
-    private static String str;
-
     public static void main(String[] args) {
         test1();
         test2();
