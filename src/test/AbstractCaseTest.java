@@ -29,8 +29,8 @@ public abstract class AbstractCaseTest {
             System.out.println("\u001B[32m" + "test " + testCase + " is success finished");
         } else {
             System.out.println("\u001B[31m" + "test " + testCase + " is failed");
-            System.out.println("expected: " + expected);
-            System.out.println("result: " + result);
+            System.out.println("expected:\n" + expected);
+            System.out.println("result:\n" + result);
         }
 
         testCase++;
