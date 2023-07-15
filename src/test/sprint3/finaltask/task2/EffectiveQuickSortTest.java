@@ -9,6 +9,7 @@ public class EffectiveQuickSortTest extends AbstractCaseTest {
         test2();
         test3();
         test4();
+        test5();
     }
 
     private static void test1() {
@@ -61,6 +62,11 @@ public class EffectiveQuickSortTest extends AbstractCaseTest {
                 "timofey 0 0\n" +
                 "Сортировка по штрафу";
         testLogic("timofey\n" + "rita\n" + "gosha\n" + "gena\n" + "alla\n");
+    }
+
+    private static void test5() {
+        str = "2\n" + "za 0 0\n" + "b 0 0\n" + "Массив из двух элементов";
+        testLogic("b\n" + "za\n");
     }
 
     private static void testLogic(String expected) {

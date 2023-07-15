@@ -1,7 +1,7 @@
 package sprint3.finaltask.task1;
 
 /**
- * id: 88982214
+ * id: 89047622
  */
 /*
 -- ПРИНЦИП РАБОТЫ --
@@ -21,6 +21,10 @@ package sprint3.finaltask.task1;
 программе эта память будет занята ещё до работы алгоритма, поэтому думаю всё же нужно брать O(1).
  */
 public class Solution {
+    public static void main(String[] args) {
+        test();
+    }
+
     public static int brokenSearch(int[] arr, int k) {
         return binarySearch(arr, 0, arr.length, k);
     }
@@ -31,17 +35,21 @@ public class Solution {
             return mid;
         }
 
-        if (right - left <= 1) {
-            return -1;
+
+        while (arr[mid] != desired) {
+            if (right - left <= 1) {
+                return -1;
+            } else if ((arr[mid] > arr[0] && arr[mid] > desired && desired >= arr[0]) ||
+                    (arr[mid] < arr[0] && (desired >= arr[0] || desired < arr[mid]))) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+
+            mid = (right - left) / 2 + left;
         }
 
-        if (arr[mid] > arr[0] && arr[mid] > desired && desired >= arr[0]) {
-            return binarySearch(arr, left, mid, desired);
-        } else if (arr[mid] < arr[0] && (desired >= arr[0] || desired < arr[mid])) {
-            return binarySearch(arr, left, mid, desired);
-        } else {
-            return binarySearch(arr, mid + 1, right, desired);
-        }
+        return mid;
     }
 
     public static void test() {
