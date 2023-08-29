@@ -1,6 +1,6 @@
 package test.sprint5.finaltask.task1;
 
-import sprint5.finaltask.task2.Heapsort;
+import sprint5.finaltask.task1.Heapsort;
 import test.AbstractCaseTest;
 
 public class HeapsortTest extends AbstractCaseTest {
